@@ -1,3 +1,8 @@
+;Write a program in assembly language that will -
+;- Take 2 single-key inputs
+;- Insert a space on screen after the inputs (Hint: ASCII value for ‘space’ is 20h)
+;- Display the inputs using the single-key output function
+
 .MODEL SMALL    ;Code model set to small
 .STACK 100H     ;Stack memory 100H size
 .CODE           ;Code starts from here

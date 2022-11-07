@@ -1,3 +1,7 @@
+;Write a program in assembly language that will -
+;- Take 3 single-key inputs, display the inputs in reverse order. A space should separate outputs as follows
+
+
 .MODEL SMALL    ;Code model set to small
 .STACK 100H     ;Stack memory 100H size
 .CODE           ;Code starts from here
