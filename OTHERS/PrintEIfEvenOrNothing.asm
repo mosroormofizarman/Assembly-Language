@@ -4,26 +4,20 @@
  
     START:      ;Mark start of code segment
     MOV AH, 1   ;AH=1,Single key input
-    MOV CX, 10  ;CX store the loop count 10 
     
     INPUT:      ;Mark input of code segment
     INT 21H     ;Take input
     
+    XOR AH, AH  ;Set AH to 0
+    MOV BL, 2   ;BL=2
     
-    CMP AL, 31H ;Check if input is the ASCII code for '1'
-    JE PRINT_O  ;if(input==1), goto label(line 22), else goto next instruction(line 16) 
+    DIV BL      ;AX/BL: quotient in AL and remainder in AH 
     
-    CMP AL, 32H ;Check if input is the ASCII code for '2'
-    JE PRINT_E  ;if(input==2), goto label(line 28), else goto next instruction(line 20) 
+    CMP AH, 0   ;Check if remainder is 0, then it is even number
     
+    JE PRINT_E  ;goto label(line 22)    
     
-    JMP EXIT    ;goto exit & thus skip line 22-31 
-    
-    PRINT_O:    ;Mark PRINT_O of code segment
-    MOV AH, 2   ;AH=2,Single key output 
-    MOV DL, 'O' ;DL='O', Display 'O'
-    INT 21H     ;Print 'O'
-    JMP EXIT    ;goto exit & thus skip line 28-31
+    JMP EXIT    ;if not even, goto exit & thus skip line 22-25 
     
     PRINT_E:    ;Mark PRINT_E of code segment
     MOV AH, 2   ;AH=2,Single key output 

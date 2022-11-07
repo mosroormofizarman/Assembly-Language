@@ -10,16 +10,16 @@
     MOV AX, @DATA ;DATA SEGMENT TO AX
     MOV DS, AX    ;AX TO DS
     
-    MOV AH, 1   ;AH=1,Single key input 
-    MOV CX, 10  ;CX store the loop count 10
-    LEA SI, A   ;SI holds the offset address of A
+    MOV AH, 1     ;AH=1,Single key input 
+    MOV CX, 10    ;CX store the loop count 10
+    LEA SI, A     ;SI holds the offset address of A
     
-    INPUT:      ;Mark input of code segment
-    INT 21H     ;Take inputs
-    MOV [SI], AL;[SI]=AL, input in [SI] 
-    INC SI      ;SI=SI+1
+    INPUT:        ;Mark input of code segment
+    INT 21H       ;Take inputs
+    MOV [SI], AL  ;[SI]=AL, input in [SI] 
+    INC SI        ;SI=SI+1
     
-    LOOP INPUT ;When the loop instruction is executed, the ECX register is decremented and the control jumps to the target label
+    LOOP INPUT    ;When the loop instruction is executed, the ECX register is decremented and the control jumps to the target label
     
     OUTPUT:       ;Mark output of code segment
     MOV AH, 9     ;AH=9,Character String output
