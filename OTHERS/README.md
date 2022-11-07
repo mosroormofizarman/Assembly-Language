@@ -1,1 +1,1 @@
-### Arithmethic Operations: [PDF](https://github.com/mosroormofizarman/NSU-LIFE/blob/main/ACADEMICS/COURSES/CSE331/CSE331%20LAB/LAB%20CLASSES/LAB%201/lab%20task_1.pdf)
+### Arithmethic Operations: [PDF 1](https://github.com/mosroormofizarman/NSU-LIFE/blob/main/ACADEMICS/COURSES/CSE331/CSE331%20LAB/LAB%20CLASSES/LAB%201/lab1_basic%20instructions.pdf) [PDF 2](https://github.com/mosroormofizarman/NSU-LIFE/blob/main/ACADEMICS/COURSES/CSE331/CSE331%20LAB/LAB%20CLASSES/LAB%201/lab%20task_1.pdf)
